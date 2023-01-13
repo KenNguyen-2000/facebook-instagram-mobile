@@ -163,14 +163,14 @@
     <LinearLayout
         android:id="@+id/login_with_fb"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="14dp"
         android:gravity="center"
+        android:onClick="loginWithFbClick"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:onClick="loginWithFbClick">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageView
             android:id="@+id/imageView2"
