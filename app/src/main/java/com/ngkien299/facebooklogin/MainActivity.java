@@ -35,13 +35,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLoginClick(View view){
+        Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+        Bundle bundle = new Bundle();
         String username = edtLoginUsername.getText().toString().trim();
         String password = edtLoginPassword.getText().toString().trim();
-        if(username.equals("admin") && password.equals("123456")){
-            Toast.makeText(getBaseContext(), "Login successfully", Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_SHORT).show();
-        }
+
+        bundle.putString("username", username);
+        bundle.putString("password", password);
+        intent.putExtra("data", bundle);
+
+        startActivity(intent);
+//        if(username.equals("admin") && password.equals("123456")){
+//            Toast.makeText(getBaseContext(), "Login successfully", Toast.LENGTH_SHORT).show();
+//        }else{
+//            Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     public void loginWithFbClick(View view){
