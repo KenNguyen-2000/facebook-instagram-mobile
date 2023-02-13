@@ -9,15 +9,16 @@ import android.os.Bundle;
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
-
+    private RecyclerView rcvItem;
+    private ItemAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        RecyclerView rcvItem = findViewById(R.id.rcv_item);
-        ItemAdapter mAdapter = new ItemAdapter(this, getListItem());
+        rcvItem = findViewById(R.id.rcv_item);
+        mAdapter = new ItemAdapter(this, getListItem());
 
         rcvItem.setAdapter(mAdapter);
 
