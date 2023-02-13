@@ -23,14 +23,14 @@ public class FacebookLoginActivity extends AppCompatActivity {
     }
 
     public void onFbLoginClick(View view){
-        Intent intent = new Intent(FacebookLoginActivity.this, WelcomeActivity.class);
-        Bundle bundle = new Bundle();
-        String username = edtFbUsername.getText().toString().trim();
-        String password = edtFbPassword.getText().toString().trim();
+        Intent intent = new Intent(FacebookLoginActivity.this, HomeActivity.class);
+//        Bundle bundle = new Bundle();
+//        String username = edtFbUsername.getText().toString().trim();
+//        String password = edtFbPassword.getText().toString().trim();
 
-        bundle.putString("username", username);
-        bundle.putString("password", password);
-        intent.putExtra("data", bundle);
+//        bundle.putString("username", username);
+//        bundle.putString("password", password);
+//        intent.putExtra("data", bundle);
 
         startActivity(intent);
 //        if(username.equals("admin") && password.equals("123456")){

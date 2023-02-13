@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLoginClick(View view){
-        Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
-        Bundle bundle = new Bundle();
-        String username = edtLoginUsername.getText().toString().trim();
-        String password = edtLoginPassword.getText().toString().trim();
-
-        bundle.putString("username", username);
-        bundle.putString("password", password);
-        intent.putExtra("data", bundle);
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+//        Bundle bundle = new Bundle();
+//        String username = edtLoginUsername.getText().toString().trim();
+//        String password = edtLoginPassword.getText().toString().trim();
+//
+//        bundle.putString("username", username);
+//        bundle.putString("password", password);
+//        intent.putExtra("data", bundle);
 
         startActivity(intent);
 //        if(username.equals("admin") && password.equals("123456")){
