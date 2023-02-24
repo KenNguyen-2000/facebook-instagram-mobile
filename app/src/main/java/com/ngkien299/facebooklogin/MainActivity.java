@@ -1,8 +1,11 @@
 package com.ngkien299.facebooklogin;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
@@ -10,6 +13,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PaintDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RectShape;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -56,4 +60,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FacebookLoginActivity.class);
         startActivity(intent);
     }
+
 }
