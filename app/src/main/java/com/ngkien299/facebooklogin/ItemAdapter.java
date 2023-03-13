@@ -74,10 +74,18 @@ public class ItemAdapter extends  RecyclerView.Adapter<ItemAdapter.ItemViewHolde
             int position = getAdapterPosition();
             if(position != RecyclerView.NO_POSITION){
                 Item item = mItemList.get(position);
-                Intent intent = new Intent(context, DetailActivity.class);
+                if(item.getItemText() == "Accessories"){
+                    Intent intent = new Intent(context, GoodsActivity.class);
 
-                intent.putExtra("item", item);
-                context.startActivity(intent);
+//                intent.putExtra("item", item);
+                    context.startActivity(intent);
+                }else{
+                    Intent intent = new Intent(context, DetailActivity.class);
+
+//                intent.putExtra("item", item);
+                    context.startActivity(intent);
+                }
+
             }
         }
 
